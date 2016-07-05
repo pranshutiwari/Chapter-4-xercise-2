@@ -1,0 +1,18 @@
+ggplot(adult, aes (x = SRAGE_P, fill= factor(RBMI))) + 
+  geom_histogram(binwidth = 1) +
+  BMI_fill
+
+ggplot(adult, aes (x = SRAGE_P, fill= factor(RBMI))) + 
+  geom_histogram(aes(y = ..density..), binwidth = 1) +
+  BMI_fill
+
+
+ggplot(adult, aes (x = SRAGE_P, fill= factor(RBMI))) + 
+  geom_histogram(binwidth = 1) +
+  BMI_fill + 
+  facet_grid(RBMI ~ .)
+
+ggplot(adult, aes(x = SRAGE_P, fill= factor(RBMI))) + 
+  geom_histogram(aes(y = ..density..), binwidth = 1) +
+  BMI_fill + 
+  facet_grid(RBMI ~ .)
